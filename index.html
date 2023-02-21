@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- DaisyUi And Tailwind StyleSheet Link Added Here -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.2/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container mx-auto h-screen flex justify-center items-center">
+        <div class="p-5 relative rounded-xl shadow-2xl shadow-slate-600">
+            <div id="toggler" class="theme-toggler active items-center p-5">
+                <input type="checkbox" class="toggle" checked />
+            </div>
+            <div id="display" class="flex flex-end h-36 items-end justify-end text-3xl block text-end mb-4 p-5">
+                    </div>
+            <div class="grid grid-cols-4 gap-2">
+                <button class="bg-pink-200 text-gray-700 font-bold py-2 px-4 rounded-full hover:origin-top" onclick="allClear()">AC</button>
+                <button class="bg-pink-200 text-gray-700 font-bold py-2 px-4 rounded-full" onclick="oneClear()">C</button>
+                <button class="bg-pink-200 text-gray-700 font-bold py-2 px-4 rounded-full" onclick="show('%')">%</button>
+                <button class="bg-pink-200 text-gray-700 font-bold py-2 px-4 rounded-full" onclick="show('/')">÷</button>
+                
+                <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg" onclick="show('7')">7</button>
+                <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg" onclick="show('8')">8</button>
+                <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg" onclick="show('9')">9</button>
+                <button class="bg-pink-200 text-gray-700 font-bold py-2 px-4 rounded-full" onclick="show('*')">&times;</button>
+
+                <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg" onclick="show('4')">4</button>
+                <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg" onclick="show('5')">5</button>
+                <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg" onclick="show('6')">6</button>
+                <button class="bg-pink-200 text-gray-700 font-bold py-2 px-4 rounded-full" onclick="show('-')">-</button>
+
+                <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg" onclick="show('1')">1</button>
+                <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg" onclick="show('2')">2</button>
+                <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg" onclick="show('3')">3</button>
+                <button class="bg-pink-200 text-gray-700 font-bold py-2 px-4 rounded-full" onclick="show('+')">+</button>
+
+                <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 col-span-2 rounded-lg" onclick="show('0')">0</button>
+                <button class="bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-lg" onclick="show('.')">.</button>
+                <button class="bg-orange-500 text-white font-bold py-2 px-4 rounded-full" onclick="calc()">=</button>
+              </div>
+    </div>
+    </div>
+    <!-- Javascript Link Added Here -->
+    <script src="calculator.js"></script>
+</body>
+</html>
